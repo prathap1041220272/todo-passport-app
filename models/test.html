@@ -1,0 +1,21 @@
+   <form name="myForm" ng-submit="loginCtrl.userLogin(user)" novalidate>
+                    <div class="form-group">
+                        <label class="control-label" for="name">Enter email:</label>
+                        <!-- input fields -->
+                        <input type="text" ng-model="loginCtrl.user.email" name="name" class="form-control" ng-minlength="3" ng-maxlength="8" placeholder="Enter email" ng-pattern="/^[a-z0-9]+$/" required> 
+                        <span class="text-danger" ng-show="myForm.name.$pristine && checkSubmit"><b>!field must be filled</b></span>
+                        <span class="text-danger" ng-show="myForm.name.$error.minlength && checkSubmit"><b>!maximum length is required</b></span>
+                        <span class="text-danger" ng-show="myForm.name.$error.maxlength && checkSubmit"><b>!minimum length is required</b></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Enter password:</label>
+                        <!-- input fields -->
+                        <input type="password" ng-model="loginCtrl.user.password" name="name1" class="form-control" ng-minlength="3" ng-maxlength="8" placeholder="Enter password" ng-pattern="/^[a-z0-9]+$/" required>
+                        <span class="text-danger" ng-show="myForm.name1.$pristine && checkSubmit"><b>!field must be filled</b></span>
+                        <span class="text-danger" ng-show="myForm.name1.$error.minlength && checkSubmit"><b>!maximum length is required</b></span>
+                        <span class="text-danger" ng-show="myForm.name1.$error.maxlength && checkSubmit"><b>!minimum length is required</b></span>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-success col-md-12">submit</button>
+                    </div>
+                </form>

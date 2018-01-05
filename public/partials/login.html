@@ -1,0 +1,30 @@
+
+<div id="div">
+        <div class="container" id="div1">
+            <div class="col col-md-12 col-md-offset-1">
+                <h1><b>login</b></h1>
+                <!-- form validation -->
+          <form name="loginForm" class="form-group" ng-submit="loginCtrl.userLogin()">
+			<div class="margin-bottom">
+				<label>Enter Email</label>
+				<input type="email" name="email" class="form-control" ng-model="loginCtrl.user.email" placeholder="Enter Email" required>
+			</div>
+			<div class="margin-bottom">
+				<label>Enter Password</label>
+				<input type="password" name="password" class="form-control" ng-model="loginCtrl.user.password" placeholder="Enter Password" required>
+			</div>
+			<div>
+             <button type="submit" class="btn btn-success col-md-12 margin-bottom">submit</button>
+                    </div>
+                </form>
+			
+                <!-- passport button -->
+                <center><b>(or)<br>signup with</b>
+                    <div>
+                        <a class="btn btn-primary col-md-5" href="/auth/fb">Facebook</a>
+                        <a class="btn btn-danger col-md-5" href="/auth/google">Google</a>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>

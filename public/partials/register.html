@@ -1,0 +1,28 @@
+<div id="divReg">
+	<div class="container" id="register">
+		<div class="col col-md-12 col-md-offset-1">
+		<h2><b>Register Form</b></h2>
+		<form class="form-group" name="regiser" ng-submit="registerCtrl.registerForm()">
+		<div class="margin-bottom">
+			<label>Enter Name</label>
+			<input type="text" class="form-control" name="name" ng-model="registerCtrl.user1.name" placeholder="Enter Name..." required>
+		</div>
+		<div class="margin-bottom">
+			<label>Enter date Of Birth</label>
+			<input type="date" class="form-control" name="date" ng-model="registerCtrl.user1.date" required="">
+		</div>
+		<div class="margin-bottom">
+			<label>Enter Email</label>
+			<input type="email" class="form-control" name="email" ng-model="registerCtrl.user.email" placeholder="Enter Email..." required>
+		</div>
+		<div class="margin-bottom">
+			<label>Enter Password</label>
+			<input type="password" class="form-control" name="pwd" ng-model="registerCtrl.user.password" placeholder="Enter Password..." required>
+		</div>
+		<div class="margin-bottom">
+			<button class="btn btn-success col-md-12" ng-disabled="regiser.$invalid">Submit</button>
+		</div>
+	</form>
+	</div>
+</div>
+</div>
